@@ -23,27 +23,27 @@ import sqlite3
 with sqlite3.connect("cars.db") as connection:
     c = connection.cursor()
 
-    # c.execute("""CREATE TABLE orders (make TEXT, model TEXT, order_date  TEXT)""")
+    c.execute("""CREATE TABLE orders (make TEXT, model TEXT, order_date  TEXT)""")
 
-    # orders = [
-    #     ('Ford', 'Focus ST', '2020-01-23'),
-    #     ('Ford', 'Focus ST', '2020-01-07'),
-    #     ('Ford', 'Focus ST', '2020-02-29'),
-    #     ('Ford', 'Edge ST', '2020-02-27'),
-    #     ('Ford', 'Edge ST', '2020-01-01'),
-    #     ('Ford', 'Edge ST', '2020-02-04'),
-    #     ('Ford', 'F-150', '2020-02-05'),
-    #     ('Ford', 'F-150', '2020-01-26'),
-    #     ('Ford', 'F-150', '2020-02-23'),
-    #     ('Honda', 'Civic Type-R', '2020-02-14'),
-    #     ('Honda', 'Civic Type-R', '2020-01-21'),
-    #     ('Honda', 'Civic Type-R', '2020-02-21'),
-    #     ('Honda', 'Accord', '2020-02-09'),
-    #     ('Honda', 'Accord', '2020-01-22'),
-    #     ('Honda', 'Accord', '2020-02-01')
-    # ]
+    orders = [
+        ('Ford', 'Focus ST', '2020-01-23'),
+        ('Ford', 'Focus ST', '2020-01-07'),
+        ('Ford', 'Focus ST', '2020-02-29'),
+        ('Ford', 'Edge ST', '2020-02-27'),
+        ('Ford', 'Edge ST', '2020-01-01'),
+        ('Ford', 'Edge ST', '2020-02-04'),
+        ('Ford', 'F-150', '2020-02-05'),
+        ('Ford', 'F-150', '2020-01-26'),
+        ('Ford', 'F-150', '2020-02-23'),
+        ('Honda', 'Civic Type-R', '2020-02-14'),
+        ('Honda', 'Civic Type-R', '2020-01-21'),
+        ('Honda', 'Civic Type-R', '2020-02-21'),
+        ('Honda', 'Accord', '2020-02-09'),
+        ('Honda', 'Accord', '2020-01-22'),
+        ('Honda', 'Accord', '2020-02-01')
+    ]
 
-    # c.executemany("INSERT INTO orders (make, model, order_date) VALUES(?, ?, ?)", orders)
+    c.executemany("INSERT INTO orders (make, model, order_date) VALUES(?, ?, ?)", orders)
 
     order_text = '''Car: {} {}
 Quantity: {}
